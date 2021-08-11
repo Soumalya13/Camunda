@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Simple_DMN" name="Simple" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.7.2">
+  <decision id="Company" name="Decision 1">
+    <extensionElements>
+      <biodi:bounds x="150" y="80" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="FIRST">
+      <input id="InputClause_1bn3l9r" label="name">
+        <inputExpression id="LiteralExpression_15kax6x" typeRef="string">
+          <text>name</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0c7hzgi">
+          <text>"Ericsson","Aegon"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1j7ifre" label="domain">
+        <inputExpression id="LiteralExpression_16b4jsk" typeRef="string">
+          <text>domain</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1qw11bg">
+          <text>"Telecom","Insurance"</text>
+        </inputValues>
+      </input>
+      <output id="output_1" label="Result" typeRef="string" />
+      <rule id="DecisionRule_1xcmkwk">
+        <inputEntry id="UnaryTests_1yyqnj5">
+          <text>Ericsson</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1us4zhh">
+          <text>Telecom</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tny4ss">
+          <text>Soumalya</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ov3dyg">
+        <inputEntry id="UnaryTests_0gwydp8">
+          <text>Aegon</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b1f87c">
+          <text>Insurance</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1j2duyb">
+          <text>New_soumalya</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

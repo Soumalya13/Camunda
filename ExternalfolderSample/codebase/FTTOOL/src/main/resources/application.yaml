@@ -1,0 +1,8 @@
+camunda.bpm:
+  admin-user:
+    id: admin
+    password: admin
+    firstName: Peter
+  filter:
+    create: All tasks
+camunda.bpm.auto-deployment-enabled: false
